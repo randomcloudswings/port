@@ -14,6 +14,18 @@ export default {
       },
     },
     extend: {
+      spacing: {
+        'section-y': 'var(--section-spacing-y)',
+        'section-x': 'var(--section-spacing-x)',
+      },
+      gap: {
+        'section': 'var(--section-gap)',
+      },
+      fontSize: {
+        'hero': ['clamp(2.5rem, 8vw, 6rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display': ['clamp(2rem, 6vw, 4rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'heading': ['clamp(1.5rem, 4vw, 3rem)', { lineHeight: '1.3' }],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
