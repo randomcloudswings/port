@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+:root {
+  --background: 280 9% 22%;
+  --foreground: 180 6% 84%;
+  --card: 280 7% 27%;
+  --card-foreground: 180 6% 84%;
+  --popover: 280 7% 27%;
+  --popover-foreground: 180 6% 84%;
+  --primary: 0 20% 57%;
+  --primary-foreground: 180 6% 84%;
+  --secondary: 280 7% 27%;
+  --secondary-foreground: 180 6% 84%;
+  --muted: 280 7% 27%;
+  --muted-foreground: 0 20% 57%;
+  --accent: 0 20% 57%;
+  --accent-foreground: 180 6% 84%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 180 6% 84%;
+  --border: 280 7% 27%;
+  --input: 280 7% 27%;
+  --ring: 0 20% 57%;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings:
+    'rlig' 1,
+    'calt' 1;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #37353e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #715a5a;
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d3dad9;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #715a5a #37353e;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom utility classes */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+.smooth-transition {
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
