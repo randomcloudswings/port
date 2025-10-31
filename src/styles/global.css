@@ -21,6 +21,35 @@
   --input: 280 7% 27%;
   --ring: 0 20% 57%;
   --radius: 0.5rem;
+
+  /* Layout spacing tokens */
+  --section-spacing-y: 6rem;
+  --section-spacing-x: 1rem;
+  --section-gap: 4rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --section-spacing-y: 8rem;
+    --section-spacing-x: 1.5rem;
+    --section-gap: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-spacing-y: 10rem;
+    --section-spacing-x: 2rem;
+    --section-gap: 6rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.reduce-motion {
+  scroll-behavior: auto;
 }
 
 body {
@@ -66,6 +95,14 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
 }
 
 /* Custom utility classes */
